@@ -1,0 +1,6 @@
+NAME = "VidCut"
+VERSION = "1.0.0"
+AUTHOR = "hyunazmi"
+HOMEPAGE = "https://github.com/hyunazmi/vidcut"
+DESCRIPTION = "Fast video cutter built on FFmpeg that re-encodes only the clip edges."
+LICENSE = "MIT"

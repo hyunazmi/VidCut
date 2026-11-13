@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vidcut"
+dynamic = ["version"]
+description = "Fast video cutter built on FFmpeg that re-encodes only the clip edges."
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "hyunazmi" }]
+keywords = ["video", "cut", "trim", "ffmpeg"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Win32 (MS Windows)",
+    "Environment :: MacOS X",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Video :: Non-Linear Editor",
+]
+dependencies = ["PySide6>=6.5"]     # ffmpeg and ffprobe are not a Python dependency: they must be installed on the system
+
+[project.urls]
+Homepage = "https://github.com/hyunazmi/vidcut"
+
+[project.scripts]
+vidcut = "vidcut.gui.app:main"
+
+[tool.setuptools.packages.find]
+include = ["vidcut*"]
+
+[tool.setuptools.package-data]
+"vidcut.gui" = ["resources/*.png"]
+
+[tool.setuptools.dynamic]
+version = { attr = "vidcut.appinfo.VERSION" }
