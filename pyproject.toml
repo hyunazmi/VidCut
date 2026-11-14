@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,7 +7,7 @@ name = "vidcut"
 dynamic = ["version"]
 description = "Fast video cutter built on FFmpeg that re-encodes only the clip edges."
 requires-python = ">=3.9"
-license = { text = "MIT" }
+license = "MIT"
 authors = [{ name = "hyunazmi" }]
 keywords = ["video", "cut", "trim", "ffmpeg"]
 classifiers = [
@@ -16,7 +16,6 @@ classifiers = [
     "Environment :: MacOS X",
     "Environment :: X11 Applications :: Qt",
     "Intended Audience :: End Users/Desktop",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: Microsoft :: Windows",
     "Operating System :: MacOS",
     "Operating System :: POSIX :: Linux",
